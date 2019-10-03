@@ -4,6 +4,9 @@ package com.stackroute.domain;
 public class Movie {
     Actor details;
 
+    public Movie() {
+    }
+
     public Movie(Actor details)
     {
         this.details=details;
