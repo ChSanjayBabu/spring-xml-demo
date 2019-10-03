@@ -6,15 +6,57 @@
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Definition for textEditor bean -->
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="details">
-            <bean class="com.stackroute.domain.Actor">
-                <property name="name" value="Will smith"></property>
-                <property name="gender" value="male"></property>
-                <property name="age" value="55"></property>
-            </bean>
-        </property>
+    <bean name="Movie1" class="com.stackroute.domain.Movie" >
+        <constructor-arg name="details">
 
+<!--            using Setter Injection-->
+
+<!--            <bean class="com.stackroute.domain.Actor">-->
+<!--                <property name="name" value="Will smith"></property>-->
+<!--                <property name="gender" value="male"></property>-->
+<!--                <property name="age" value="55"></property>-->
+<!--            </bean>-->
+
+<!--            using COnstructor injection-->
+                <bean class="com.stackroute.domain.Actor">
+                    <constructor-arg name="name" value="Will smith"/>
+                    <constructor-arg name="gender" value="male"/>
+                    <constructor-arg name="age" value="55"/>
+                </bean>
+
+        </constructor-arg>
+
+    </bean>
+    <bean name="Movie2" class="com.stackroute.domain.Movie" >
+        <constructor-arg name="details">
+
+            <!--            using Setter Injection-->
+
+            <!--            <bean class="com.stackroute.domain.Actor">-->
+            <!--                <property name="name" value="Will smith"></property>-->
+            <!--                <property name="gender" value="male"></property>-->
+            <!--                <property name="age" value="55"></property>-->
+            <!--            </bean>-->
+
+            <!--            using COnstructor injection-->
+            <bean class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Robet downy junior"/>
+                <constructor-arg name="gender" value="male"/>
+                <constructor-arg name="age" value="45"/>
+            </bean>
+
+        </constructor-arg>
+
+    </bean>
+    <bean id = "actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="Robet downy junior"/>
+        <constructor-arg name="gender" value="male"/>
+        <constructor-arg name="age" value="45"/>
+    </bean>
+    <bean id = "actor3" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="chris hemsworth"/>
+        <constructor-arg name="gender" value="male"/>
+        <constructor-arg name="age" value="35"/>
     </bean>
 
 </beans>

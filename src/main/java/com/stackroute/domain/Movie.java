@@ -4,6 +4,10 @@ package com.stackroute.domain;
 public class Movie {
     Actor details;
 
+    public Movie(Actor details)
+    {
+        this.details=details;
+    }
     public void setDetails(Actor details) {
         this.details = details;
     }
