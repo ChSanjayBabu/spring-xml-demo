@@ -7,6 +7,9 @@
 
     <!-- Definition for textEditor bean -->
 
+    <bean id ="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="initializer" destroy-method="destroyer">
+
+    </bean>
     <bean id ="details" class="com.stackroute.domain.Actor">
         <property name="name" value="Will smith"/>
         <property name="gender" value="male"/>
