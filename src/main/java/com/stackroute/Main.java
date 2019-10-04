@@ -15,8 +15,8 @@ import java.io.InputStream;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext read = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie1 = read.getBean("movie1",Movie.class);
-        Movie movie2 = read.getBean("movie2",Movie.class);
+//        Movie movie1 = read.getBean("movie1",Movie.class);
+//        Movie movie2 = read.getBean("movie2",Movie.class);
         ((AbstractApplicationContext)read).registerShutdownHook();
 //        movie1.show();
 //        movie2.show();
